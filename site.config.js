@@ -19,16 +19,16 @@ module.exports = {
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
-  defaultPageIcon: null, // URL
-  defaultPageCover: null, // URL
-  defaultPageCoverPosition: 0.5,
+  defaultPageIcon:'',
+  defaultPageCover: '',
+  defaultPageCoverPosition: 0.1862,
 
   // image CDN host to proxy all image requests through (optional)
   // NOTE: this requires you to set up an external image proxy
   imageCDNHost: null,
 
   // Utteranc.es comments via GitHub issue comments (optional)
-  utterancesGitHubRepo: null,
+  //utterancesGitHubRepo: 'transitive-bullshit/transitivebullsh.it',
 
   // whether or not to enable support for LQIP preview images (optional)
   // NOTE: this requires you to set up Google Firebase and add the environment
