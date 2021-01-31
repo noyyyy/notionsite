@@ -29,6 +29,7 @@ import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
 import { PageActions } from './PageActions'
 import { Footer } from './Footer'
+import { PageSocial } from './PageSocial'
 // import { GitHubShareButton } from './GitHubShareButton'
 import { ReactUtterances } from './ReactUtterances'
 
@@ -112,6 +113,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(pageId)
 
+  // const isRootPage =
+  //   parsePageId(block.id) === parsePageId(site.rootNotionPageId)
   const isBlogPost =
     block.type === 'page' && block.parent_table === 'collection'
   const showTableOfContents = !!isBlogPost
@@ -141,6 +144,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
     if (tweet) {
       pageAside = <PageActions tweet={tweet} />
     }
+  } else {
+    pageAside = <PageSocial />
   }
 
   return (

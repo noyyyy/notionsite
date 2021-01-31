@@ -5,7 +5,7 @@ module.exports = {
   // basic site info (required)
   name: 'Jerryw Blog',
   domain: 'jerryw.cn',
-  author: 'jerrywang',
+  author: 'Jerry Wang',
 
   // open graph metadata (optional)
   description: '',
