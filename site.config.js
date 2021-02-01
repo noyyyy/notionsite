@@ -3,7 +3,7 @@ module.exports = {
   rootNotionPageId: '78fc5a4b88d74b0e824e29407e9f1ec1',
 
   // if you want to restrict pages to a single notion workspace (optional)
-  rootNotionSpaceId: null,
+  rootNotionSpaceId: 'fde5ac74eea345278f004482710e1af3',
 
   // basic site info (required)
   name: 'Transitive Bullshit',
