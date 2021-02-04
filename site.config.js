@@ -2,6 +2,9 @@ module.exports = {
   // where it all starts -- the site's root Notion page (required)
   rootNotionPageId: '4e37b62ef87245369f859e4e1f7a2cab',
 
+  // if you want to restrict pages to a single notion workspace (optional)
+  //rootNotionSpaceId: 'fde5ac74eea345278f004482710e1af3',
+
   // basic site info (required)
   name: 'Jerryw Blog',
   domain: 'jerryw.cn',
@@ -25,7 +28,7 @@ module.exports = {
 
   // image CDN host to proxy all image requests through (optional)
   // NOTE: this requires you to set up an external image proxy
-  imageCDNHost: null,
+  //imageCDNHost: 'https://ssfy.io',
 
   // Utteranc.es comments via GitHub issue comments (optional)
   utterancesGitHubRepo: 'Jerrywang959/notionsite',
@@ -33,5 +36,5 @@ module.exports = {
   // whether or not to enable support for LQIP preview images (optional)
   // NOTE: this requires you to set up Google Firebase and add the environment
   // variables specified in .env.example
-  isPreviewImageSupportEnabled: false
+  isPreviewImageSupportEnabled: null
 }
