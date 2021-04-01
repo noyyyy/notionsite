@@ -1,10 +1,7 @@
-FROM node:lts-buster
+FROM node:lts-alpine3.13
 
 WORKDIR /app
 EXPOSE 3000
-USER root
-
-
 
 COPY . .
 RUN npm install 
