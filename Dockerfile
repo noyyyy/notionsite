@@ -7,7 +7,7 @@ USER root
 
 
 COPY . .
-RUN cnpm install 
+RUN npm install 
 RUN npm run build
 
 
