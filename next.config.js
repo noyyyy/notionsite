@@ -9,3 +9,18 @@ module.exports = withBundleAnalyzer({
     domains: ['']
   }
 })
+
+
+module.exports = {
+async redirects() {
+  return [
+    {
+      source: '/notion-faster',
+      destination: 'https://notionfaster.cn',
+      basePath:  false,
+      permanent:   false,
+    },
+  ]
+}
+
+}

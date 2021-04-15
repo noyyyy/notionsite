@@ -1,6 +1,6 @@
-const pageUrlOverrides = require('./page-overrides.json')
-  // top of site.config.js
-  // and then use pageUrlOverrides in your config
+// const pageUrlOverrides = require('./page-overrides.json')
+//   // top of site.config.js
+//   // and then use pageUrlOverrides in your config
 
 
 module.exports = {
@@ -50,8 +50,7 @@ module.exports = {
   // example:
   //
   // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
+  //   '/notion-faster': 'https://notionfaster.cn',
   // }
   pageUrlOverrides: null
 }
