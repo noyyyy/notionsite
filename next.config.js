@@ -6,9 +6,21 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   images: {
-    domains: ['pbs.twimg.com']
-  },
-  future: {
-    webpack5: true
+    domains: ['']
   }
 })
+
+
+module.exports = {
+async redirects() {
+  return [
+    {
+      source: '/notion-faster',
+      destination: 'https://notionfaster.cn',
+      basePath:  false,
+      permanent:   false,
+    },
+  ]
+}
+
+}
