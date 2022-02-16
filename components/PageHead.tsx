@@ -23,7 +23,7 @@ export const PageHead: React.FC<types.PageProps> = ({ site }) => {
 
       <meta name='theme-color' content='#EB625A' />
       <meta property='og:type' content='website' />
-      <script async defer data-domain="notionfaster.cn" src="https://pl.jerryw.cn/js/plausible.outbound-links.js"></script>
+      <script async defer data-domain="jerryw.cn" src="https://plausible.io/js/plausible.outbound-links.js"></script>
     </Head>
   )
 }
