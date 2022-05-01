@@ -39,8 +39,46 @@ export const PageHead: React.FC<
         </>
       )}
 
-      <meta name='theme-color' content='#EB625A' />
-      <meta property='og:type' content='website' />
+      {config.twitter && (
+        <meta name='twitter:creator' content={`@${config.twitter}`} />
+      )}
+
+      {description && (
+        <>
+          <meta name='description' content={description} />
+          <meta property='og:description' content={description} />
+          <meta name='twitter:description' content={description} />
+        </>
+      )}
+
+      {socialImageUrl ? (
+        <>
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:image' content={socialImageUrl} />
+          <meta property='og:image' content={socialImageUrl} />
+        </>
+      ) : (
+        <meta name='twitter:card' content='summary' />
+      )}
+
+      {url && (
+        <>
+          <link rel='canonical' href={url} />
+          <meta property='og:url' content={url} />
+          <meta property='twitter:url' content={url} />
+        </>
+      )}
+
+      <link
+        rel='alternate'
+        type='application/rss+xml'
+        href={rssFeedUrl}
+        title={site?.name}
+      />
+
+      <meta property='og:title' content={title} />
+      <meta name='twitter:title' content={title} />
+      <title>{title}</title>
       <script
         async
         defer
