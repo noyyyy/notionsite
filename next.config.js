@@ -21,17 +21,4 @@ module.exports = withBundleAnalyzer({
   }
 })
 
-
-module.exports = {
-// async redirects() {
-//   return [
-//     {
-//       source: '/notion-faster',
-//       destination: 'https://notionfaster.cn',
-//       basePath:  false,
-//       permanent:   false,
-//     },
-//   ]
-// }
-
-}
+module.exports = {}
