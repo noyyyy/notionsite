@@ -1,10 +1,25 @@
 import Head from 'next/head'
 import * as React from 'react'
+
 import * as types from 'lib/types'
+import * as config from 'lib/config'
+import { getSocialImageUrl } from 'lib/get-social-image-url'
 
-// TODO: remove duplication between PageHead and NotionPage Head
+export const PageHead: React.FC<
+  types.PageProps & {
+    title?: string
+    description?: string
+    image?: string
+    url?: string
+  }
+> = ({ site, title, description, pageId, image, url }) => {
+  const rssFeedUrl = `${config.host}/feed`
 
-export const PageHead: React.FC<types.PageProps> = ({ site }) => {
+  title = title ?? site?.name
+  description = description ?? site?.description
+
+  const socialImageUrl = getSocialImageUrl(pageId) || image
+
   return (
     <Head>
       <meta charSet='utf-8' />
@@ -14,10 +29,13 @@ export const PageHead: React.FC<types.PageProps> = ({ site }) => {
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
       />
 
-      {site?.description && (
+      <meta name='robots' content='index,follow' />
+      <meta property='og:type' content='website' />
+
+      {site && (
         <>
-          <meta name='description' content={site.description} />
-          <meta property='og:description' content={site.description} />
+          <meta property='og:site_name' content={site.name} />
+          <meta property='twitter:domain' content={site.domain} />
         </>
       )}
 
